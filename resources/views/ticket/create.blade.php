@@ -1,13 +1,17 @@
 @extends('layouts.apps')
 
 @section('title')
-    CREATE
+Create InTicket
 @stop
+
+<style>
+    .Icon {font-size: 16px; vertical-align: middle}
+</style>
 
 @section('content')
     <form action="{{ route('ticket.store') }}" method="post">
         {{ csrf_field() }}
-        <h2>CREATE InTicket</h2>
+        <h3><span class="Icon"></span> CREATE</h3>
         <hr>
         <div class="form-group">
             <label for="title" class="control-label">Title</label>
@@ -27,8 +31,8 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-info">Create</button>
-            <a href="{{ route('ticket.index') }}" class="btn btn-default">Back</a>
+            <button type="submit" class="btn btn-info"><span class="Icon"></span> CREATE</button>
+            <a href="{{ route('ticket.index') }}" class="btn btn-default">Back <span class="Icon"></span></a>
         </div>
     </form>
 @stop

@@ -1,18 +1,20 @@
 @extends('layouts.apps')
 
 @section('title')
- DETAIL
+Detail InTicket
 @stop
 
 <style>
-    .titleSpan {font-size: 20px;}
+    .Icon {font-size: 16px; color: #999}
+    .IconI {font-size: 15px; vertical-align: middle}
+    .titleSpan {font-size: 16px}
 </style>
 
 @section('content')
 
     @foreach($ticket as $tickets)
 
-        <h3>DETAIL | <span class="titleSpan">{{ $tickets->title }}</span></h3>
+        <h3>DETAIL&ensp;<span class="Icon"></span> <span class="titleSpan">{{ $tickets->title }}</span></h3>
         <hr>
         <div class="form-group">
             <label for="title" class="control-label">Title</label>
@@ -26,7 +28,7 @@
             <label for="theatre" class="control-label">Theatre</label>
             <input type="text" class="form-control" name="theatre" value="{{ $tickets->kode }}&ensp;{{ $tickets->location }}" readonly>
         </div>
-        <a href="{{ route('ticket.index') }}" class="btn btn-info martop-sm">Back</a>
+        <a href="{{ route('ticket.index') }}" class="btn btn-default">Back <span class="IconI"></span></a>
     
     @endforeach
 

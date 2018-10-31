@@ -1,18 +1,20 @@
 @extends('layouts.apps')
 
 @section('title')
-EDIT {{ $ticket->title }}
+{{ $ticket->title }}
 @stop
 
 <style>
-    .titleSpan {font-size: 20px}
+    .Icon {font-size: 16px; color: #999}
+    .IconI {font-size: 14px; vertical-align: middle}
+    .titleSpan {font-size: 16px}
 </style>
 
 @section('content')
     <form action="{{ route('ticket.update', $ticket->id) }}" method="post">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
-        <h3>EDIT | <span class="titleSpan">{{ $ticket->title }}</span></h3>
+        <h3>EDIT&ensp;<span class="Icon"></span> <span class="titleSpan">{{ $ticket->title }}</span></h3>
         <hr>
         <div class="form-group">
             <label for="title" class="control-label">Title</label>
@@ -31,8 +33,8 @@ EDIT {{ $ticket->title }}
             </select>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-info">Edit</button>              
-            <a href="{{ route('ticket.index') }}" class="btn btn-default">Back</a>
+            <button type="submit" class="btn btn-info"><span class="IconI"></span> Edit</button>              
+            <a href="{{ route('ticket.index') }}" class="btn btn-default">Back <span class="IconI"></span></a>
         </div>
     </form>
 @stop

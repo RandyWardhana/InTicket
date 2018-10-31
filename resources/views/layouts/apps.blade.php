@@ -14,7 +14,7 @@
     .martop-lg {margin-top: 70px;}
     /* body {background-color: #393e46} */
     select {cursor: pointer}
-    body {background-color: #555; color: #fff; font-family: SEGOE UI Symbol}
+    body {background-color: #555; color: #fff; font-family: Segoe UI Symbol, Segoe MDL2 Assets}
 </style>
 <body>
     <div class="container martop-lg">
